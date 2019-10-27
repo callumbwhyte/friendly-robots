@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Our.Umbraco.DynamicRobots
+namespace Our.Umbraco.FriendlyRobots
 {
     public class Constants
     {

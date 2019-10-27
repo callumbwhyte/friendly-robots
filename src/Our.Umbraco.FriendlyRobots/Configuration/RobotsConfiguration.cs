@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Our.Umbraco.DynamicRobots.Configuration
+namespace Our.Umbraco.FriendlyRobots.Configuration
 {
     public class RobotsConfiguration
     {

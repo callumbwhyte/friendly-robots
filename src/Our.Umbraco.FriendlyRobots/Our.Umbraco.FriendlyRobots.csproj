@@ -6,10 +6,10 @@
     <Description></Description>
     <Authors>Callum Whyte</Authors>
     <Copyright>Copyright © 2019 Callum Whyte, and other contributors</Copyright>
-    <PackageLicenseUrl>https://github.com/callumbwhyte/dynamic-robots/blob/master/LICENSE.md</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/callumbwhyte/dynamic-robots</PackageProjectUrl>
-    <PackageIconUrl>https://raw.githubusercontent.com/callumbwhyte/dynamic-robots/master/docs/img/logo.png</PackageIconUrl>
-    <RepositoryUrl>https://github.com/callumbwhyte/dynamic-robots</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/callumbwhyte/friendly-robots/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/callumbwhyte/friendly-robots</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/callumbwhyte/friendly-robots/master/docs/img/logo.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/callumbwhyte/friendly-robots</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>Umbraco Robots SEO</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

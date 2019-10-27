@@ -1,9 +1,9 @@
 ﻿using System.Configuration;
-using Our.Umbraco.DynamicRobots.Configuration;
-using Our.Umbraco.DynamicRobots.Extensions;
+using Our.Umbraco.FriendlyRobots.Configuration;
+using Our.Umbraco.FriendlyRobots.Extensions;
 using Umbraco.Core.Composing;
 
-namespace Our.Umbraco.DynamicRobots.Startup
+namespace Our.Umbraco.FriendlyRobots.Startup
 {
     public class RobotsComposer : IUserComposer
     {

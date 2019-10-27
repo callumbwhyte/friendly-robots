@@ -1,7 +1,7 @@
-# Umbraco Dynamic Robots
+# Umbraco Friendly Robots
 
-[![NuGet release](https://img.shields.io/nuget/v/Our.Umbraco.DynamicRobots.svg)](https://www.nuget.org/packages/Our.Umbraco.DynamicRobots/)
-[![Our Umbraco project page](https://img.shields.io/badge/our-umbraco-orange.svg)](https://our.umbraco.com/projects/website-utilities/dynamic-robots/)
+[![NuGet release](https://img.shields.io/nuget/v/Our.Umbraco.FriendlyRobots.svg)](https://www.nuget.org/packages/Our.Umbraco.FriendlyRobots/)
+[![Our Umbraco project page](https://img.shields.io/badge/our-umbraco-orange.svg)](https://our.umbraco.com/projects/website-utilities/friendly-robots/)
 
 ## Getting started
 
@@ -9,17 +9,17 @@ This package is supported on Umbraco 8.1+.
 
 ### Installation
 
-Dynamic Robots is available from Our Umbraco, NuGet, or as a manual download directly from GitHub.
+Friendly Robots is available from Our Umbraco, NuGet, or as a manual download directly from GitHub.
 
 #### Our Umbraco repository
 
-You can find a downloadable package, along with a discussion forum for this package, on the [Our Umbraco](https://our.umbraco.com/projects/website-utilities/dynamic-robots/) site.
+You can find a downloadable package, along with a discussion forum for this package, on the [Our Umbraco](https://our.umbraco.com/projects/website-utilities/friendly-robots/) site.
 
 #### NuGet package repository
 
-To [install from NuGet](https://www.nuget.org/packages/Our.Umbraco.DynamicRobots/), run the following command in your instance of Visual Studio.
+To [install from NuGet](https://www.nuget.org/packages/Our.Umbraco.FriendlyRobots/), run the following command in your instance of Visual Studio.
 
-    PM> Install-Package Our.Umbraco.DynamicRobots
+    PM> Install-Package Our.Umbraco.FriendlyRobots
 
 ## Contribution guidelines
 

@@ -1,9 +1,9 @@
 ﻿using System.Web.Routing;
-using Our.Umbraco.DynamicRobots.Routing;
+using Our.Umbraco.FriendlyRobots.Routing;
 using Umbraco.Core.Composing;
 using Umbraco.Web;
 
-namespace Our.Umbraco.DynamicRobots.Startup
+namespace Our.Umbraco.FriendlyRobots.Startup
 {
     internal class RouteComponet : IComponent
     {

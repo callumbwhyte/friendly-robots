@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Our.Umbraco.DynamicRobots.Extensions
+namespace Our.Umbraco.FriendlyRobots.Extensions
 {
     internal static class StringExtensions
     {

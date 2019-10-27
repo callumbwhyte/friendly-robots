@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using System.Text;
 using System.Web.Mvc;
-using Our.Umbraco.DynamicRobots.Configuration;
+using Our.Umbraco.FriendlyRobots.Configuration;
 using Umbraco.Web.Mvc;
 
-namespace Our.Umbraco.DynamicRobots.Controllers
+namespace Our.Umbraco.FriendlyRobots.Controllers
 {
     public class RobotsController : RenderMvcController
     {

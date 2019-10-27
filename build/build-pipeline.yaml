@@ -6,7 +6,7 @@ name: $(packageVersion)$(Rev:.r)
 
 variables:
   buildConfiguration: 'Release'
-  packageName: 'Our.Umbraco.DynamicRobots'
+  packageName: 'Our.Umbraco.FriendlyRobots'
 
 trigger: none
 

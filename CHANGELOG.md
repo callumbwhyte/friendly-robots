@@ -6,6 +6,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/) and this 
 
 ## [1.0.0] - 2019-10-27
 ### Added
-* Initial release of Dynamic Robots for Umbraco 8.1
+* Initial release of Friendly Robots for Umbraco 8.1
 
-[Unreleased]: https://github.com/callumbwhyte/dynamic-robots/compare/release-1.0.0...HEAD
+[Unreleased]: https://github.com/callumbwhyte/friendly-robots/compare/release-1.0.0...HEAD

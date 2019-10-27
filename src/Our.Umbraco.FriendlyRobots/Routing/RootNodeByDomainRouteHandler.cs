@@ -1,10 +1,10 @@
 ﻿using System.Web.Routing;
-using Our.Umbraco.DynamicRobots.Helpers;
+using Our.Umbraco.FriendlyRobots.Helpers;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.Web.Mvc;
 
-namespace Our.Umbraco.DynamicRobots.Routing
+namespace Our.Umbraco.FriendlyRobots.Routing
 {
     internal class RootNodeByDomainRouteHandler : UmbracoVirtualNodeRouteHandler
     {
