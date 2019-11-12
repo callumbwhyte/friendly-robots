@@ -3,11 +3,11 @@ using Umbraco.Core.Composing;
 
 namespace Our.Umbraco.FriendlyRobots.Startup
 {
-    public class RouteComposer : IUserComposer
+    public class RobotsRouteComposer : IUserComposer
     {
         public void Compose(Composition composition)
         {
-            composition.Components().Insert<RouteComponet>();
+            composition.Components().Insert<RobotsRouteComponet>();
         }
     }
 }

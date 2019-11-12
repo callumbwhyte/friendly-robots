@@ -5,11 +5,11 @@ using Umbraco.Web;
 
 namespace Our.Umbraco.FriendlyRobots.Startup
 {
-    internal class RouteComponet : IComponent
+    internal class RobotsRouteComponet : IComponent
     {
         private readonly IUmbracoContextFactory _umbracoContextFactory;
 
-        public RouteComponet(IUmbracoContextFactory umbracoContextFactory)
+        public RobotsRouteComponet(IUmbracoContextFactory umbracoContextFactory)
         {
             _umbracoContextFactory = umbracoContextFactory;
         }

@@ -5,7 +5,7 @@ using Umbraco.Core.Composing;
 
 namespace Our.Umbraco.FriendlyRobots.Startup
 {
-    public class RobotsComposer : IUserComposer
+    public class RobotsConfigComposer : IUserComposer
     {
         private const string Prefix = "Umbraco.Robots";
 
