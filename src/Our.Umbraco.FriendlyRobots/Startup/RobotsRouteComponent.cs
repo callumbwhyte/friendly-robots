@@ -1,15 +1,15 @@
 ﻿using System.Web.Routing;
-using Our.Umbraco.FriendlyRobots.Routing;
+using Our.Umbraco.Extensions.Routing;
 using Umbraco.Core.Composing;
 using Umbraco.Web;
 
 namespace Our.Umbraco.FriendlyRobots.Startup
 {
-    internal class RobotsRouteComponet : IComponent
+    internal class RobotsRouteComponent : IComponent
     {
         private readonly IUmbracoContextFactory _umbracoContextFactory;
 
-        public RobotsRouteComponet(IUmbracoContextFactory umbracoContextFactory)
+        public RobotsRouteComponent(IUmbracoContextFactory umbracoContextFactory)
         {
             _umbracoContextFactory = umbracoContextFactory;
         }

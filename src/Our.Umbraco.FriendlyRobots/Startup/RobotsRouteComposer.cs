@@ -7,7 +7,7 @@ namespace Our.Umbraco.FriendlyRobots.Startup
     {
         public void Compose(Composition composition)
         {
-            composition.Components().Insert<RobotsRouteComponet>();
+            composition.Components().Insert<RobotsRouteComponent>();
         }
     }
 }
