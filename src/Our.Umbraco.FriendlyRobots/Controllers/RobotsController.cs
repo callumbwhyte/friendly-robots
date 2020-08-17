@@ -1,73 +1,36 @@
-﻿using System.Linq;
-using System.Text;
+﻿using System.Text;
 using System.Web.Mvc;
-using Our.Umbraco.FriendlyRobots.Configuration;
+using Our.Umbraco.FriendlyRobots.Builders;
 using Umbraco.Web.Mvc;
 
 namespace Our.Umbraco.FriendlyRobots.Controllers
 {
     public class RobotsController : RenderMvcController
     {
-        private readonly RobotsConfiguration _robotsConfig;
+        private readonly IRobotsBuilder _robotsBuilder;
 
-        public RobotsController(RobotsConfiguration robotsConfig)
+        public RobotsController(IRobotsBuilder robotsBuilder)
         {
-            _robotsConfig = robotsConfig;
+            _robotsBuilder = robotsBuilder;
         }
 
         public ActionResult RenderRobots()
         {
-            var robotsTxt = BuildRobots();
+            var startNode = UmbracoContext.PublishedRequest.PublishedContent;
+
+            if (startNode == null)
+            {
+                return HttpNotFound();
+            }
+
+            var robotsTxt = _robotsBuilder.BuildRobots(startNode);
+
+            if (string.IsNullOrWhiteSpace(robotsTxt) == true)
+            {
+                return HttpNotFound();
+            }
 
             return Content(robotsTxt, "text/text", Encoding.UTF8);
-        }
-
-        private string BuildRobots()
-        {
-            var stringBuilder = new StringBuilder();
-
-            var userAgent = _robotsConfig.UserAgent;
-
-            if (string.IsNullOrWhiteSpace(userAgent) == false)
-            {
-                userAgent = "*";
-            }
-
-            stringBuilder.AppendLine("User-agent: " + userAgent);
-
-            if (_robotsConfig.Disallow.Any() == false
-                && _robotsConfig.Allow.Any() == false)
-            {
-                stringBuilder.AppendLine("Allow: /");
-            }
-
-            if (_robotsConfig.Disallow.Any() == true)
-            {
-                foreach (var path in _robotsConfig.Disallow)
-                {
-                    stringBuilder.AppendLine("Disallow: " + path);
-                }
-            }
-
-            if (_robotsConfig.Allow.Any() == true)
-            {
-                foreach (var path in _robotsConfig.Allow)
-                {
-                    stringBuilder.AppendLine("Allow: " + path);
-                }
-            }
-
-            if (_robotsConfig.Sitemaps.Any() == true)
-            {
-                foreach (var path in _robotsConfig.Sitemaps)
-                {
-                    stringBuilder.AppendLine("Sitemap: " + path);
-                }
-            }
-
-            var robotsTxt = stringBuilder.ToString();
-
-            return robotsTxt;
         }
     }
 }

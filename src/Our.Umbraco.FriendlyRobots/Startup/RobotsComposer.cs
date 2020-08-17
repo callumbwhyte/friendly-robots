@@ -1,4 +1,5 @@
 ﻿using System.Configuration;
+using Our.Umbraco.FriendlyRobots.Builders;
 using Our.Umbraco.FriendlyRobots.Configuration;
 using Our.Umbraco.FriendlyRobots.Extensions;
 using Umbraco.Core;
@@ -11,6 +12,8 @@ namespace Our.Umbraco.FriendlyRobots.Startup
         public void Compose(Composition composition)
         {
             composition.Components().Append<RobotsRouteComponent>();
+
+            composition.RegisterUnique<IRobotsBuilder, RobotsBuilder>();
 
             composition.Register(factory => GetConfiguration());
         }
