@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Text;
+﻿using System.Text;
 using Our.Umbraco.FriendlyRobots.Configuration;
 using Umbraco.Core.Models.PublishedContent;
 
@@ -20,20 +19,19 @@ namespace Our.Umbraco.FriendlyRobots.Builders
 
             var userAgent = _robotsConfig.UserAgent;
 
-            if (string.IsNullOrWhiteSpace(userAgent) == false)
+            if (string.IsNullOrWhiteSpace(userAgent) == true)
             {
                 userAgent = "*";
             }
 
             stringBuilder.AppendLine("User-agent: " + userAgent);
 
-            if (_robotsConfig.Disallow.Any() == false
-                && _robotsConfig.Allow.Any() == false)
+            if (_robotsConfig.Disallow == null && _robotsConfig.Allow == null)
             {
                 stringBuilder.AppendLine("Allow: /");
             }
 
-            if (_robotsConfig.Disallow.Any() == true)
+            if (_robotsConfig.Disallow != null)
             {
                 foreach (var path in _robotsConfig.Disallow)
                 {
@@ -41,7 +39,7 @@ namespace Our.Umbraco.FriendlyRobots.Builders
                 }
             }
 
-            if (_robotsConfig.Allow.Any() == true)
+            if (_robotsConfig.Allow != null)
             {
                 foreach (var path in _robotsConfig.Allow)
                 {
@@ -49,7 +47,7 @@ namespace Our.Umbraco.FriendlyRobots.Builders
                 }
             }
 
-            if (_robotsConfig.Sitemaps.Any() == true)
+            if (_robotsConfig.Sitemaps != null)
             {
                 foreach (var path in _robotsConfig.Sitemaps)
                 {
