@@ -25,6 +25,66 @@ To [install from NuGet](https://www.nuget.org/packages/Our.Umbraco.FriendlyRobot
 
     PM> Install-Package Our.Umbraco.FriendlyRobots
 
+## Usage
+
+Once installed, the robots.txt file will be visible on the URL `/robots.txt`, such as `https://www.yoursite.com/robots.txt`.
+
+If a physical `robots.txt` file exists in the root of the website, the dynamically generated file will be overwritten.
+
+### Configuration
+
+By default the robots.txt is automatically set to **allow all** traffic, but can be configured via a selection of app settings in the `web.config`.
+
+Unless an alternative value is supplied, the "useragent" field will be *catch-all* ("*").
+
+```
+<add key="Umbraco.Robots.UserAgent" value="*" />
+```
+
+Multiple values can be supplied for each of the "allow", "disallow", and "sitemaps" URL fields as a comma separated list, like this:
+
+```
+<add key="Umbraco.Robots.Disallow" value="/some-path/,/some-other-path/" />
+```
+
+### Advanced configuration
+
+It is possible to override the default configuration of the package using dependency injection, by registering a new instance of `RobotsConfiguration` within an `IUserComposer` class.
+
+This is helpful for advanced configuration needs, such as defining unique settings per site in a multi-site Umbraco installation.
+
+Here's an example:
+
+```
+using Our.Umbraco.FriendlyRobots.Startup;
+
+[ComposeAfter(typeof(RobotsComposer))]
+public class CustomRobotsComposer : IUserComposer
+{
+    public void Compose(Composition composition)
+    {
+        composition.Register(factory => GetConfiguration(), Lifetime.Request);
+    }
+
+    private RobotsConfiguration GetConfiguration()
+    {
+        var configuration = new RobotsConfiguration
+        {
+            UserAgent = "*",
+            Allow = new[] { "/" },
+            Disallow = new[]
+            {
+                "/some-path/",
+                "/some-other-path/"
+            },
+            Sitemaps = new[] { "/sitemap.xml" }
+        };
+
+        return configuration;
+    }
+}
+```
+
 ## Contribution guidelines
 
 To raise a new bug, create an issue on the GitHub repository. To fix a bug or add new features, fork the repository and send a pull request with your changes. Feel free to add ideas to the repository's issues list if you would to discuss anything related to the library.
