@@ -6,12 +6,12 @@
     <Description>A friendly tool for creating dynamic robots.txt files in Umbraco 8</Description>
     <Authors>Callum Whyte</Authors>
     <Copyright>Copyright © 2020 Callum Whyte, and other contributors</Copyright>
-    <PackageLicenseUrl>https://github.com/callumbwhyte/friendly-robots/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/callumbwhyte/friendly-robots/blob/main/LICENSE.md</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/callumbwhyte/friendly-robots</PackageProjectUrl>
-    <PackageIconUrl>https://raw.githubusercontent.com/callumbwhyte/friendly-robots/master/docs/img/logo.png</PackageIconUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/callumbwhyte/friendly-robots/main/docs/img/logo.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/callumbwhyte/friendly-robots</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
-    <PackageTags>Umbraco Robots SEO</PackageTags>
+    <PackageTags>umbraco robots seo</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
