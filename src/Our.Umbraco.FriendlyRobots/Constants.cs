@@ -7,5 +7,7 @@ namespace Our.Umbraco.FriendlyRobots
         public const string RobotsRouteName = "Robots";
 
         public const string RobotsRouteUrl = "robots.txt";
+
+        public const string ConfigPrefix = "Umbraco.Robots.";
     }
 }
