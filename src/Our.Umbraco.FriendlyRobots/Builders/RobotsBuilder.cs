@@ -6,18 +6,18 @@ namespace Our.Umbraco.FriendlyRobots.Builders
 {
     public class RobotsBuilder : IRobotsBuilder
     {
-        private readonly RobotsConfiguration _robotsConfig;
+        private readonly RobotsConfiguration _config;
 
-        public RobotsBuilder(RobotsConfiguration robotsConfig)
+        public RobotsBuilder(RobotsConfiguration config)
         {
-            _robotsConfig = robotsConfig;
+            _config = config;
         }
 
         public string BuildRobots(IPublishedContent node, string culture)
         {
             var stringBuilder = new StringBuilder();
 
-            var userAgent = _robotsConfig.UserAgent;
+            var userAgent = _config.UserAgent;
 
             if (string.IsNullOrWhiteSpace(userAgent) == true)
             {
@@ -26,30 +26,30 @@ namespace Our.Umbraco.FriendlyRobots.Builders
 
             stringBuilder.AppendLine("User-agent: " + userAgent);
 
-            if (_robotsConfig.Disallow == null && _robotsConfig.Allow == null)
+            if (_config.Disallow == null && _config.Allow == null)
             {
                 stringBuilder.AppendLine("Allow: /");
             }
 
-            if (_robotsConfig.Disallow != null)
+            if (_config.Allow != null)
             {
-                foreach (var path in _robotsConfig.Disallow)
-                {
-                    stringBuilder.AppendLine("Disallow: " + path);
-                }
-            }
-
-            if (_robotsConfig.Allow != null)
-            {
-                foreach (var path in _robotsConfig.Allow)
+                foreach (var path in _config.Allow)
                 {
                     stringBuilder.AppendLine("Allow: " + path);
                 }
             }
 
-            if (_robotsConfig.Sitemaps != null)
+            if (_config.Disallow != null)
             {
-                foreach (var path in _robotsConfig.Sitemaps)
+                foreach (var path in _config.Disallow)
+                {
+                    stringBuilder.AppendLine("Disallow: " + path);
+                }
+            }
+
+            if (_config.Sitemaps != null)
+            {
+                foreach (var path in _config.Sitemaps)
                 {
                     stringBuilder.AppendLine("Sitemap: " + path);
                 }
