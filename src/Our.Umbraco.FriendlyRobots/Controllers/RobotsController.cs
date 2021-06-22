@@ -16,14 +16,23 @@ namespace Our.Umbraco.FriendlyRobots.Controllers
 
         public ActionResult RenderRobots()
         {
-            var startNode = UmbracoContext.PublishedRequest.PublishedContent;
+            var request = UmbracoContext.PublishedRequest;
+
+            var startNode = request?.PublishedContent;
 
             if (startNode == null)
             {
                 return HttpNotFound();
             }
 
-            var robotsTxt = _robotsBuilder.BuildRobots(startNode);
+            var culture = request?.Culture.Name;
+
+            if (culture == null)
+            {
+                return HttpNotFound();
+            }
+
+            var robotsTxt = builder.BuildRobots(startNode, culture);
 
             if (string.IsNullOrWhiteSpace(robotsTxt) == true)
             {

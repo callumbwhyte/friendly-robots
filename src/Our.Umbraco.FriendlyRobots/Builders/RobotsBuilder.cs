@@ -13,7 +13,7 @@ namespace Our.Umbraco.FriendlyRobots.Builders
             _robotsConfig = robotsConfig;
         }
 
-        public string BuildRobots(IPublishedContent startNode)
+        public string BuildRobots(IPublishedContent node, string culture)
         {
             var stringBuilder = new StringBuilder();
 

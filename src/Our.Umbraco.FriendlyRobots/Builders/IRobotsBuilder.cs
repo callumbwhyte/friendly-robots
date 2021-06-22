@@ -4,6 +4,6 @@ namespace Our.Umbraco.FriendlyRobots.Builders
 {
     public interface IRobotsBuilder
     {
-        string BuildRobots(IPublishedContent startNode);
+        string BuildRobots(IPublishedContent node, string culture);
     }
 }
