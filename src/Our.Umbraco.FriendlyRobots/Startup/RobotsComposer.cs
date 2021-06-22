@@ -1,5 +1,6 @@
-using Our.Umbraco.FriendlyRobots.Builders;
-﻿using Our.Umbraco.FriendlyRobots.Configuration;
+﻿using Our.Umbraco.FriendlyRobots.Builders;
+using Our.Umbraco.FriendlyRobots.Composing;
+using Our.Umbraco.FriendlyRobots.Configuration;
 using Umbraco.Core;
 using Umbraco.Core.Composing;
 
@@ -9,11 +10,11 @@ namespace Our.Umbraco.FriendlyRobots.Startup
     {
         public void Compose(Composition composition)
         {
-            composition.Components().Append<RobotsRouteComponent>();
-
-            composition.RegisterUnique<IRobotsBuilder, RobotsBuilder>();
+            composition.Components().Append<RobotsComponent>();
 
             composition.Register(factory => RobotsConfiguration.Create());
+
+            composition.RegisterRobots<RobotsBuilder>("robots.txt");
         }
     }
 }

@@ -1,21 +1,30 @@
 ﻿using System.Text;
 using System.Web.Mvc;
+using System.Web.Routing;
 using Our.Umbraco.FriendlyRobots.Builders;
+using Our.Umbraco.FriendlyRobots.Composing;
 using Umbraco.Web.Mvc;
 
 namespace Our.Umbraco.FriendlyRobots.Controllers
 {
     public class RobotsController : RenderMvcController
     {
-        private readonly IRobotsBuilder _robotsBuilder;
+        private readonly RobotsCollection _robotsCollection;
 
-        public RobotsController(IRobotsBuilder robotsBuilder)
+        public RobotsController(RobotsCollection robotsCollection)
         {
-            _robotsBuilder = robotsBuilder;
+            _robotsCollection = robotsCollection;
         }
 
         public ActionResult RenderRobots()
         {
+            var route = ((Route)RouteData.Route).Url;
+
+            if (_robotsCollection.TryGetValue(route, out IRobotsBuilder builder) == false)
+            {
+                return HttpNotFound();
+            }
+
             var request = UmbracoContext.PublishedRequest;
 
             var startNode = request?.PublishedContent;
