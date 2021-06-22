@@ -7,6 +7,9 @@ using Umbraco.Web.Mvc;
 
 namespace Our.Umbraco.FriendlyRobots.Controllers
 {
+#if !DEBUG
+    [OutputCache(Duration = 900, VaryByCustom = "url", VaryByParam = "*")]
+#endif
     public class RobotsController : RenderMvcController
     {
         private readonly RobotsCollection _robotsCollection;
