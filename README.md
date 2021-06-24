@@ -5,7 +5,7 @@
 [![NuGet release](https://img.shields.io/nuget/v/Our.Umbraco.FriendlyRobots.svg)](https://www.nuget.org/packages/Our.Umbraco.FriendlyRobots/)
 [![Our Umbraco project page](https://img.shields.io/badge/our-umbraco-orange.svg)](https://our.umbraco.com/projects/website-utilities/friendly-robots/)
 
-Friendly Robots makes adding a dynamic robots.txt file to your Umbraco 8 website easy!
+Friendly Robots makes adding a dynamic robots.txt file to your Umbraco website easy!
 
 ## Getting started
 
@@ -47,43 +47,7 @@ Multiple values can be supplied for each of the "allow", "disallow", and "sitema
 <add key="Umbraco.Robots.Disallow" value="/some-path/,/some-other-path/" />
 ```
 
-### Advanced configuration
-
-It is possible to override the default configuration of the package using dependency injection, by registering a new instance of `RobotsConfiguration` within an `IUserComposer` class.
-
-This is helpful for advanced configuration needs, such as defining unique settings per site in a multi-site Umbraco installation.
-
-Here's an example:
-
-```
-using Our.Umbraco.FriendlyRobots.Startup;
-
-[ComposeAfter(typeof(RobotsComposer))]
-public class CustomRobotsComposer : IUserComposer
-{
-    public void Compose(Composition composition)
-    {
-        composition.Register(factory => GetConfiguration(), Lifetime.Request);
-    }
-
-    private RobotsConfiguration GetConfiguration()
-    {
-        var configuration = new RobotsConfiguration
-        {
-            UserAgent = "*",
-            Allow = new[] { "/" },
-            Disallow = new[]
-            {
-                "/some-path/",
-                "/some-other-path/"
-            },
-            Sitemaps = new[] { "/sitemap.xml" }
-        };
-
-        return configuration;
-    }
-}
-```
+The [project wiki](https://github.com/callumbwhyte/friendly-robots/wiki) contains further details about the advanced configuration options available.
 
 ## Contribution guidelines
 
@@ -99,6 +63,6 @@ The package logo uses the [Robot](https://thenounproject.com/term/search/2490617
 
 ## License
 
-Copyright &copy; 2019 [Callum Whyte](https://callumwhyte.com/), and other contributors
+Copyright &copy; 2021 [Callum Whyte](https://callumwhyte.com/), and other contributors
 
 Licensed under the [MIT License](LICENSE.md).
