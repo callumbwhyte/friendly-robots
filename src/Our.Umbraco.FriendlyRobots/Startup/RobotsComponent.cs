@@ -20,7 +20,7 @@ namespace Our.Umbraco.FriendlyRobots.Startup
 
         public void Initialize()
         {
-            foreach (var path in _robotsCollection.Keys)
+            foreach (var path in _robotsCollection.Paths)
             {
                 var values = new
                 {
