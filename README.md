@@ -1,15 +1,15 @@
 # Umbraco Friendly Robots
 
-<img src="docs/img/logo.png?raw=true" alt="Umbraco Friendly Sitemap" width="250" align="right" />
+<img src="docs/img/logo.png?raw=true" alt="Umbraco Friendly Robots" width="250" align="right" />
 
-[![NuGet release](https://img.shields.io/nuget/v/Our.Umbraco.FriendlyRobots.svg)](https://www.nuget.org/packages/Our.Umbraco.FriendlyRobots/)
-[![Our Umbraco project page](https://img.shields.io/badge/our-umbraco-orange.svg)](https://our.umbraco.com/projects/website-utilities/friendly-robots/)
+[![NuGet](https://img.shields.io/nuget/v/Our.Umbraco.FriendlyRobots.svg)](https://www.nuget.org/packages/Our.Umbraco.FriendlyRobots/)
+[![Our Umbraco](https://img.shields.io/badge/our-umbraco-orange.svg)](https://our.umbraco.com/projects/website-utilities/friendly-robots/)
 
 Friendly Robots makes adding a dynamic robots.txt file to your Umbraco website easy!
 
 ## Getting started
 
-This package is supported on Umbraco 8.1+.
+Friendly Robots is supported on Umbraco 8.1+.
 
 ### Installation
 
@@ -59,7 +59,7 @@ This project is maintained by [Callum Whyte](https://callumwhyte.com/) and contr
 
 ## Credits
 
-The package logo uses the [Robot](https://thenounproject.com/term/search/2490617/) icon from the [Noun Project](https://thenounproject.com) by [Adrien Coquet](https://thenounproject.com/coquet_adrien/), licensed under [CC BY 3.0 US](https://creativecommons.org/licenses/by/3.0/us/).
+The logo uses the [Robot](https://thenounproject.com/term/robot/2490617/) icon from the [Noun Project](https://thenounproject.com) by [Adrien Coquet](https://thenounproject.com/coquet_adrien/), licensed under [CC BY 3.0 US](https://creativecommons.org/licenses/by/3.0/us/).
 
 ## License
 
