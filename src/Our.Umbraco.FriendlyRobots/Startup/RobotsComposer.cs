@@ -12,7 +12,7 @@ namespace Our.Umbraco.FriendlyRobots.Startup
         {
             composition.Components().Append<RobotsComponent>();
 
-            composition.Register(factory => RobotsConfiguration.Create());
+            composition.Register(factory => RobotsConfiguration.Create(), Lifetime.Singleton);
 
             composition.RegisterRobots<RobotsBuilder>("robots.txt");
         }
