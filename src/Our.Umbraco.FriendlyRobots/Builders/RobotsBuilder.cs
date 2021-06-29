@@ -4,7 +4,7 @@ using Umbraco.Core.Models.PublishedContent;
 
 namespace Our.Umbraco.FriendlyRobots.Builders
 {
-    internal class RobotsBuilder : IRobotsBuilder
+    public class RobotsBuilder : IRobotsBuilder
     {
         private readonly RobotsConfiguration _config;
 
