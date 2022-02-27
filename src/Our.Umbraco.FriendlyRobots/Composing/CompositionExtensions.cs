@@ -12,7 +12,7 @@ namespace Our.Umbraco.FriendlyRobots.Composing
                 .Add<T>(path);
         }
 
-        public static void RegisterRobots(this Composition composition, string path)
+        public static void RemoveRobots(this Composition composition, string path)
         {
             composition.WithCollectionBuilder<RobotsCollectionBuilder>()
                 .Remove(path);

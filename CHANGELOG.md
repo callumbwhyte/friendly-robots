@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/) and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.2.2] - 2022-02-27
+### Changed
+* Renamed incorrect `RemoveRobots` extension method
+
 ## [1.2.1] - 2021-06-29
 ### Changed
 * Default `IRobotsBuilder` implementations are public to improve extensibility
@@ -34,7 +38,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/) and this 
 ### Added
 * Initial release of Friendly Robots for Umbraco 8.1
 
-[Unreleased]: https://github.com/callumbwhyte/friendly-robots/compare/release-1.2.1...HEAD
+[Unreleased]: https://github.com/callumbwhyte/friendly-robots/compare/release-1.2.2...HEAD
+[1.2.2]: https://github.com/callumbwhyte/friendly-robots/compare/release-1.2.1...release-1.2.2
 [1.2.1]: https://github.com/callumbwhyte/friendly-robots/compare/release-1.2.0...release-1.2.1
 [1.2.0]: https://github.com/callumbwhyte/friendly-robots/compare/release-1.1.0...release-1.2.0
 [1.1.0]: https://github.com/callumbwhyte/friendly-robots/compare/release-1.0.0...release-1.1.0
